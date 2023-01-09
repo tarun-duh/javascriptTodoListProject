@@ -74,3 +74,6 @@ font-size: 1rem;
 .complete-btn{
     background-color: rgb(3, 102, 3);
 }
+.complete-btn,.trash-btn{
+    pointer-events: none;
+}
