@@ -77,3 +77,6 @@ font-size: 1rem;
 .complete-btn,.trash-btn{
     pointer-events: none;
 }
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
