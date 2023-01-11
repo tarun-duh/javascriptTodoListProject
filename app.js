@@ -41,11 +41,14 @@ function deleteCheck(e) {
   //delete todo
   if (item.classList[0] === "trash-btn") {
     const todo = item.parentElement;
-    todo.remove();
+    //animation
+    todo.classList.add("fall");
+    todo.addEventListener("transitionend", function () {
+      todo.remove();
+    });
   }
   if (item.classList[0] === "complete-btn") {
     const todos = item.parentElement;
-    todo.classList.add("fall");
     todos.classList.toggle("completed");
   }
 }
