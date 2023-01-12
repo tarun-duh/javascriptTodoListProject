@@ -86,3 +86,30 @@ opacity: 0.5;
     transform: translateY(8rem) rotate(20deg) ;
     opacity: 0;
 }
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #17afb7;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.selecter::after{
+    content:"\25BC";
+    position: absolute;
+    background: #17afb7;
+    top:0;
+right:0;
+padding: 1rem;
+pointer-events: none;
+}
