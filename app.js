@@ -2,11 +2,12 @@
 const todoList = document.querySelector(".Todo-list");
 const todoButton = document.querySelector(".Todo-button");
 const todoInput = document.querySelector(".Todo-input");
+const filterOption = document.querySelector(".filter-Todo");
 
 //eventlistners
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
-
+filterOption.addEventListener("click", filterTodo);
 //functions
 function addTodo(event) {
   event.preventDefault();
@@ -52,3 +53,5 @@ function deleteCheck(e) {
     todos.classList.toggle("completed");
   }
 }
+
+function filterTodo(e) {}
