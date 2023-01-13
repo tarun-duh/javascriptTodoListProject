@@ -2,7 +2,7 @@
 const todoList = document.querySelector(".Todo-list");
 const todoButton = document.querySelector(".Todo-button");
 const todoInput = document.querySelector(".Todo-input");
-const filterOption = document.querySelector(".filter-Todo");
+const filterOption = document.querySelector(".filter-todo");
 
 //eventlistners
 todoButton.addEventListener("click", addTodo);
@@ -19,7 +19,7 @@ function addTodo(event) {
   newTodo.classList.add("newTodo");
   newTodo.innerHTML = todoInput.value;
   todoDiv.append(newTodo);
-  // creting complete button
+  // creating complete button
   const completedButton = document.createElement("button");
   completedButton.classList.add("complete-btn");
   completedButton.innerHTML = '<i class ="fas fa-check"><i>';
@@ -32,9 +32,6 @@ function addTodo(event) {
   todoList.appendChild(todoDiv);
   //clear to do input
   todoInput.value = "";
-  trashButton.addEventListener("click", function () {
-    console.log("hey");
-  });
 }
 function deleteCheck(e) {
   const item = e.target;
@@ -54,4 +51,26 @@ function deleteCheck(e) {
   }
 }
 
-function filterTodo(e) {}
+function filterTodo(e) {
+  const todos = todoList.childNodes;
+  todos.forEach(function (todo) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+
+      case "completed":
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+      case "uncompleted":
+        if (!todo.classList.contains("complete")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+    }
+  });
+}
