@@ -119,12 +119,19 @@ transition:all 0.3s ease;
     background-color: white;
     color: #17afb7;
 }
-@media only screen and (max-width: 600px) {
-    body {
-margin-left: 5px;
-margin-right: 5px;   
+@media only screen and (max-width: 640px) {
+    header h1 {
+        font-size: large;
+    }
+ form{
+    margin-left: 20px;
+    margin-right: 10px;  
  }
  .Todo-input{
     width: 70%;
+    
+ }
+ .select{
+    max-width: 25%;
  }
   }
