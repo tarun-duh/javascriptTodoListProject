@@ -119,19 +119,40 @@ transition:all 0.3s ease;
     background-color: white;
     color: #17afb7;
 }
+.newTodo{
+    overflow-wrap: break-word;
+    overflow:auto;
+
+}
 @media only screen and (max-width: 640px) {
     header h1 {
         font-size: large;
     }
  form{
     margin-left: 20px;
+    margin-right: 20px;  
+    display: block;
+ }
+ .Todo-container{
+    margin-left: 10px;
     margin-right: 10px;  
  }
  .Todo-input{
-    width: 70%;
+    width: 100%;
     
  }
+.Todo-button{
+    margin-left: 10px;
+}
+ .Todo-list{
+    width: 100%;
+ }
  .select{
-    max-width: 25%;
+    max-width: fit-content;
+    margin: 16px 0px 16px auto;
+    
+ }
+ .task-container{
+    display: flex;
  }
   }
