@@ -119,3 +119,8 @@ transition:all 0.3s ease;
     background-color: white;
     color: #17afb7;
 }
+@media only screen and (max-width: 600px) {
+    body {
+margin-left: 5px;
+margin-right: 5px;    }
+  }
